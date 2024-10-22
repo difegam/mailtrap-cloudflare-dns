@@ -1,0 +1,68 @@
+# Ruff configuration file
+
+# Same as Black
+line-length = 100
+indent-width = 4
+target-version = "py312"
+show-fixes = true
+extend-exclude = [".venv", "logs", "__pycache__", "build", "dist"]
+
+[format]
+preview = true
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+
+[lint]
+preview = true
+
+# Enable rules https://docs.astral.sh/ruff/rules/
+select = [
+    "ANN",  # annotations
+    "ARG",  # Arguments
+    "B",    # bugbear
+    "BLE",  # blind-except
+    "C4",   # comprehensions
+    "DJ",   # Django
+    "DTZ",  # naive datetime
+    "ERA",  # commented-out-code
+    "E",    # style errors
+    "EXE",  # shebang
+    "F",    # Pyflakes
+    "I",    # Isort
+    "ICN",  # import-conventions.
+    "INP",
+    "ISC",  # string concatenation
+    "LOG",  # logging
+    "N",    # naming
+    "PERF", # performance
+    "PGH",  # pygrep-hooks
+    "PIE",  # miscellaneous
+    "PL",   # pylint
+    "PTH",  # use-pathlib
+    "Q",    # quotes
+    "RET",  # unnecessary-return
+    "RSE",  # raise
+    "RUF",  # Ruff
+    "S",    # security
+    "SIM",  # simplify
+    "T20",  # print statements
+    "TCH",  # type-checking
+    "TID",  # tidy imports
+    "UP",   # upgrade
+    "W",    # style warnings
+    "TRY",  # try/except blocks
+    "YTT",  # sys.version
+]
+ignore = [
+    "ANN101", # Missing type annotation for `self` in method
+    "ANN102", # Missing type annotation for `cls` in classmethod
+    "N806",   # Variable in function should be lowercase
+    "S101",   # Use of `assert` detected
+    "T201",   # print statement
+
+]
+fixable = ["ALL"]
+
+[lint.isort]
+known-third-party = ["REPLACE_PACKAGE_NAME"]

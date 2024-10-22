@@ -1,0 +1,3 @@
+# DISCLAIMER
+
+This tool is a hobby project currently under development and is intended solely for personal use in homelab environments. It may contain bugs or incomplete features. Use at your own risk. The creator assumes no responsibility for any potential issues, including but not limited to data loss, security vulnerabilities, or system malfunctions. Contributions and feedback are welcome, but please note that this is not designed for production use.

@@ -1,0 +1,26 @@
+[project]
+name = "mailtrap-cloudflare-dns"
+version = "0.1.0"
+description = "A simple Python tool used to register Mailtrap domains’ verification records in Cloudflare DNS."
+authors = [{ name = "Diego Gamboa", email = "info@dgamboa.com" }]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = ["httpx>=0.27.2", "loguru>=0.7.2", "python-dotenv>=1.0.1"]
+
+[project.urls]
+Repository = "https://github.com/difegam/mailtrap-cloudflare-dns"
+
+[project.scripts]
+app = "mailtrap_cloudflare_dns.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = ["pre-commit>=3.8.0", "pytest>=8.3.3", "ruff>=0.6.4"]
+
+[tool.pytest.ini_options]
+addopts = "-vvv"
+testpaths = "tests"
